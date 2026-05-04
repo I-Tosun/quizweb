@@ -31,19 +31,29 @@ const Login = ({ onClose }) => {
                 <ErrorMessage message={error} />
                 {status === "loading" && <LoadingSpinner />}
 
-                <label>Email</label>
+                <label htmlFor="login-email">
+                    Email
+                </label>
 
                 <input
+                    id="login-email"
+                    name="email"
                     type="email"
+                    autoComplete="email"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required/>
 
-                <label>Password</label>
+                <label htmlFor="login-password">
+                    Password
+                </label>
 
                 <div className="password_wrapper">
                     <input
+                        id="login-password"
+                        name="password"
                         type={showPassword ? "text" : "password"}
+                        autoComplete="current-password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required/>

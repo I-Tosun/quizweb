@@ -17,6 +17,8 @@ import AdminDashboard from "./pages/admin/AdminDashboard.jsx";
 import ManageScores from "./pages/admin/ManageScores.jsx";
 import ManageUsers from "./pages/admin/ManageUsers.jsx";
 import ManageMessages from "./pages/admin/ManageMessages.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import Profile from "./pages/Profile.jsx";
 
 
 function QuizWrapper() {
@@ -52,6 +54,7 @@ function App() {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/about" element={<AboutUs />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path="/profile" element={<Profile />} />
 
                     {/* Admin routes */}
                     <Route
@@ -85,6 +88,10 @@ function App() {
                                 <ManageMessages />
                             </PrivateRoute>
                         }/>
+
+                    <Route
+                        path="*"
+                        element={<NotFound />} />
 
                 </Routes>
             </Layout>

@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "../assets/styles/Navbar.css";
 
 import logo from "../assets/images/logo.png";
+import { Icon } from "@iconify/react";
+
 
 import { menuItems } from "../helpers/menuItems";
 import { languages } from "../helpers/languages";
@@ -82,7 +84,7 @@ const Navbar = ({ openLogin, openSignUp }) => {
                                 </li>
                             ))}
 
-                            {isAdmin && ( // GEWIJZIGD: isAdmin is nu boolean uit Context
+                            {isAdmin && (
                                 <li>
                                     <Link
                                         to="/admin"
@@ -98,14 +100,27 @@ const Navbar = ({ openLogin, openSignUp }) => {
 
             </div>
 
+            <label htmlFor="quiz-search" className="visually-hidden">Zoek quiz</label>
             {/* Search */}
-            <input
-                type="text"
-                className="search"
-                placeholder={t("search")}
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                onKeyDown={handleSearch}/>
+            <div className="search_wrapper">
+
+                <input
+                    id="quiz-search"
+                    name="quiz-search"
+                    type="text"
+                    className="search"
+                    placeholder={t("search")}
+                    autoComplete="off"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={handleSearch}
+                />
+                <button
+                    className="search_icon_btn"
+                    onClick={() => handleSearch({ key: "Enter" })}>
+                    <Icon icon="mdi:magnify" width="18" />
+                </button>
+            </div>
 
             {/* Right */}
             <div className="navbar_right">
@@ -129,6 +144,7 @@ const Navbar = ({ openLogin, openSignUp }) => {
                         <span className="username">
                             {t("hello")} {user?.username || "User"}
                         </span>
+                        <Link to="/profile" className="nav-text">Profiel</Link>
 
                         <button
                             className="nav-text"

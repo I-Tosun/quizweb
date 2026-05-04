@@ -88,22 +88,47 @@
     width: 100%;
 }
 
-/* Search  */
-.search {
-    flex: 1;
+.search_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
     max-width: 400px;
     margin: 0 auto;
+}
+/* Search  */
+.search {
+    width: 100%;
     padding: 8px 12px;
+    padding-right: 35px;
     border: 1px solid #000;
     border-radius: 10px;
     background-color: #fff;
     color: #000;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 /* Search icon knop mobile */
 .search_icon_btn {
-    display: none;
-}
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 /* Right */
 .navbar_right {
@@ -196,14 +221,27 @@
         font-size: 13px;
     }
 
+    @media (max-width: 768px) {
+
+        .search_wrapper {
+            width: 125px;
+        }
+
+    }
+
     /* Searchbar */
     .search {
         display: block;
         width: 90px;
-        padding: 4px 6px;
+        padding: 4px 24px 4px 6px;
         font-size: 11px;
         border-radius: 6px;
-        margin:0;
+        margin: 0;
+        flex: unset;
+    }
+
+    .search_icon_btn {
+        right: 20px;
     }
 
     .navbar_right {

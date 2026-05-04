@@ -50,25 +50,36 @@ const SignUp = ({ onClose }) => {
                 <ErrorMessage message={error} />
                 {loading && <LoadingSpinner />}
 
-                <label>Email Address</label>
+                <label htmlFor="Signup-email">
+                    Email Address
+                </label>
                 <input
+                    id="Signup-email"
+                    name="email"
                     type="email"
+                    autoComplete="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required/>
 
-                <label>Screen Name</label>
+                <label htmlFor="signup-username">Screen Name</label>
                 <input
+                    id="signup-username"
+                    name="username"
                     type="text"
+                    autoComplete="username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required/>
 
                 {/* Password */}
-                <label>Password</label>
+                <label htmlFor="signup-password">Password</label>
                 <div className="password_wrapper">
                     <input
+                        id="signup-password"
+                        name="password"
                         type={showPassword ? "text" : "password"}
+                        autoComplete="new-password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required/>
@@ -81,10 +92,13 @@ const SignUp = ({ onClose }) => {
                 </div>
 
                 {/* Confirm password */}
-                <label>Confirm Password</label>
+                <label htmlFor="signup-confirm-password">Confirm Password</label>
                 <div className="password_wrapper">
                     <input
+                        id="signup-confirm-password"
+                        name="confirm-password"
                         type={showConfirmPassword ? "text" : "password"}
+                        autoComplete="new-password"
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                         required/>

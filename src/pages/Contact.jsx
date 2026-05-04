@@ -58,9 +58,11 @@ const Contact = () => {
                 <form className="contact_form" onSubmit={handleSubmit(onSubmit)}>
 
                     {/* Naam */}
-                    <label>Naam</label>
+                    <label htmlFor="contact-name">Naam</label>
                     <input
+                        id="contact-name"
                         type="text"
+                        autoComplete="name"
                         {...register("name", {
                             required: "Naam is verplicht",
                             minLength: {
@@ -73,9 +75,11 @@ const Contact = () => {
                     )}
 
                     {/* Email */}
-                    <label>Email</label>
+                    <label htmlFor="contact-email">Email</label>
                     <input
+                        id="contact-email"
                         type="email"
+                        autoComplete="email"
                         {...register("email", {
                             required: "Email is verplicht",
                             pattern: {
@@ -88,9 +92,11 @@ const Contact = () => {
                     )}
 
                     {/* Bericht */}
-                    <label>Bericht</label>
+                    <label htmlFor="contact-message">Bericht</label>
                     <textarea
+                        id="contact-message"
                         rows="5"
+                        autoComplete="off"
                         {...register("message", {
                             required: "Bericht is verplicht",
                             minLength: {

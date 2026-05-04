@@ -73,6 +73,8 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    max-height: 70vh;
+    overflow-y: scroll;
 }
 
 /* Users tabel grid */
@@ -170,19 +172,46 @@
 
 @media (max-width: 700px) {
 
-    .admin_table_header {
-        display: none;
-    }
-
-    .admin_row {
-        grid-template-columns: 1fr;
-        gap: 6px;
+    .admin_page {
         padding: 12px;
     }
 
-    .admin_row span::before {
-        font-weight: bold;
-        margin-right: 6px;
+    .admin_container{
+        padding: 16px;
+        overflow-x: auto;
     }
+
+    .admin_header h1{
+        font-size: 24px;
+    }
+    .admin_header p{
+        font-size: 14px;
+    }
+
+    .admin_table{
+        min-width: 600px;
+    }
+
+    .admin_table_header {
+        display: grid;
+    }
+
+    .admin_table_row, .admin_table_header{
+        font-size: 13px;
+    }
+    .admin_table_row span{
+        white-space: nowrap;
+    }
+
+    .admin_delete {
+        padding: 8px 10px;
+        font-size: 12px; }
+
+    .admin_back {
+        justify-content: center; }
+
+    .admin_back_btn {
+        width: 100%;
+        text-align: center; }
 
 }

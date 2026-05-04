@@ -33,7 +33,6 @@ const ManageUsers = () => {
                         "Authorization": `Bearer ${token}`
                     }
                 });
-
                 if (response.ok) {
                     const data = await response.json();
                     setUsers(data);
@@ -52,7 +51,9 @@ const ManageUsers = () => {
 
     const handleDelete = async (id) => {
 
-        if (!window.confirm("Weet je zeker dat je deze gebruiker wilt verwijderen?")) return;
+        if (!window.confirm("Weet je zeker dat je deze gebruiker wilt verwijderen?")) { return;
+
+        }
 
         try {
             const token = localStorage.getItem("token");
@@ -60,15 +61,18 @@ const ManageUsers = () => {
                 method: "DELETE",
                 headers: {
                     ...projectHeader,
-                    "Authorization": `Bearer ${token}`
+                    Authorization: `Bearer ${token}`
                 }
             });
 
             if (response.ok) {
                 alert("User verwijderd");
-                setUsers(prev => prev.filter((u) => u.id !== id));
+                setUsers(prev => prev.filter((u) => u.id !== id) );
+            } else if (response.status === 403) {
+                alert("Verwijderen niet toegestaan");
+            } else {
+                alert("Verwijderen mislukt");
             }
-
         } catch {
             alert("Verwijderen mislukt");
         }
@@ -97,10 +101,10 @@ const ManageUsers = () => {
                             <span>Action</span>
                         </div>
 
-                        {users.map((user, index) => {
+                        {users.map((user) => {
                             const roleList = Array.isArray(user.roles) ? user.roles.join(", ") : "-";
                             return (
-                                <div className="admin_table_row" key={index}>
+                                <div className="admin_table_row" key={`${user.id}-${user.email}`}>
                                     <span>{user.id}</span>
                                     <span>{user.email}</span>
                                     <span>{roleList}</span>
