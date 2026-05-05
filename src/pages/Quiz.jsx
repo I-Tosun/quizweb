@@ -30,6 +30,7 @@ const Quiz = () => {
     const [quizFinished, setQuizFinished] = useState(false);
     const [timeLeft, setTimeLeft] = useState(20);
 
+
     const scoreStoredRef = useRef(false);
 
     const currentQuestion = quizQuestions[currentQuestionIndex];
@@ -42,6 +43,7 @@ const Quiz = () => {
         if (!currentQuestion) return [];
         return shuffleAnswers(currentQuestion);
     }, [currentQuestion]);
+
 
     //Timer
 
@@ -111,18 +113,25 @@ const Quiz = () => {
         return (
             <section className="quiz_page">
                 <div className="quiz_container">
+                    <div className="quiz_finish_header">
+                        <h1>{t("quizFinished")}</h1>
+                    </div>
                     <div className="quiz_content quiz_finished">
-
-                        <div className="finish_icon">🏁</div>
-                        <h2>{t("quizFinished")}</h2>
-                        <p>{t("yourScore")}: {score} / {quizQuestions.length}</p>
-                        <p>{t("percentage")}: {percentage}%</p>
-
+                    <div className="finish_icon">🏁</div>
+                    <div className="quiz_finish_stats">
+                        <div className="quiz_finish_stat">
+                            <span>{t("yourScore")}</span>
+                            <h2> {score} / {quizQuestions.length} </h2>
+                        </div>
+                        <div className="quiz_finish_stat">
+                            <span>{t("percentage")}</span>
+                            <h2>{percentage}%</h2>
+                        </div>
+                    </div>
                         <div className="quiz_finish_actions">
                             <PrimaryButton to="/scores" label={t("viewScores")} />
                             <PrimaryButton to="/" label={t("newQuiz")} className="restart_btn" />
                         </div>
-
                     </div>
                 </div>
             </section>

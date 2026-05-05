@@ -8,7 +8,7 @@ import { Icon } from "@iconify/react";
 
 const Login = ({ onClose }) => {
     const { login, status, error } = useAuth();
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const [showPassword, setShowPassword] = useState(false);
@@ -16,7 +16,7 @@ const Login = ({ onClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await login(username, password);
+            await login(email, password);
             alert("Login succesvol");
             onClose();
         } catch (error) {
@@ -40,8 +40,8 @@ const Login = ({ onClose }) => {
                     name="email"
                     type="email"
                     autoComplete="email"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required/>
 
                 <label htmlFor="login-password">

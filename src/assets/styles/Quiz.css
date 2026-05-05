@@ -162,6 +162,18 @@
     text-align: center;
 }
 
+.quiz_finish_header { background-color: #172FC6; color: #fff; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 40px; }
+
+.quiz_finish_header h1 { font-size: 42px; }
+
+.quiz_finish_stats { display: flex; gap: 40px; margin-top: 20px; margin-bottom: 30px; }
+
+.quiz_finish_stat { background-color: #ECECDC; padding: 24px 40px; border-radius: 10px; min-width: 180px; }
+
+.quiz_finish_stat span { display: block; margin-bottom: 10px; font-size: 16px; opacity: 0.8; }
+
+.quiz_finish_stat h2 { font-size: 32px; color: #172FC6; }
+
 .finish_icon {
     font-size: 90px;
     margin-bottom: 20px;
@@ -255,5 +267,14 @@
         font-size: 14px;
         padding: 12px;
         min-height: 48px;
+    }
+
+    .quiz_finish_stats {
+    flex-direction: column;
+    gap: 16px;
+}
+
+    .quiz_finish_header h1 {
+        font-size: 28px;
     }
 }

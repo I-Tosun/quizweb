@@ -1,0 +1,23 @@
+/* Shared message */
+.message {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Error */
+.message_error {
+    background-color: #ffe6e6;
+    color: #b30000;
+    border: 1px solid #ffb3b3;
+}
+
+/* Success */
+.message_success {
+    background-color: #e6ffed;
+    color: #006622;
+    border: 1px solid #99e6b3;
+}
+

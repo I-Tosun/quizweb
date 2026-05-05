@@ -2,7 +2,7 @@
 .header {
     background-color: #172FC6;
     color: #fff;
-    padding: 6rem 0;
+    padding: 12rem 0;
 }
 
 /* Container */
@@ -13,12 +13,12 @@
 }
 
 .header h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
 }
 
 .header p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     line-height: 1.6;
 }
 
@@ -40,15 +40,15 @@
 /* Mobile */
 @media (max-width: 600px) {
     .header {
-        padding: 3rem 0;
+        padding: 5rem 0;
     }
 
     .header h1 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         margin-bottom: 1rem;
     }
 
     .header p {
-        font-size: 0.95rem;
+        font-size: 0.90rem;
     }
 }

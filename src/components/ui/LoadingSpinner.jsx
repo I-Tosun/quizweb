@@ -1,10 +1,9 @@
+import "../../assets/styles/ui/LoadingSpinner.css";
+
 const LoadingSpinner = () => {
     return (
-        <div style={{
-            textAlign: "center",
-            padding: "20px"
-        }}>
-            <p>Laden...</p>
+        <div className="spinner_wrapper">
+            <div className="spinner"></div>
         </div>
     );
 };

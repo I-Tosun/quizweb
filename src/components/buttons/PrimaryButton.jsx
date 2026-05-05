@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../../assets/styles/Buttons.css";
+import "../../assets/styles/buttons/Buttons.css";
 
 // Reusable primary button component
 const PrimaryButton = ({ to, label, onClick, className = "" }) => {

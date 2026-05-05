@@ -1,14 +1,10 @@
-const SuccessMessage = ({ message }) => {
-    if (!message) return null;
+import "../../assets/styles/ui/Messages.css";
 
+const SuccessMessage = ({ message }) => {
+
+    if (!message) return null;
     return (
-        <div style={{
-            padding: "12px",
-            backgroundColor: "#e6ffed",
-            color: "#006622",
-            borderRadius: "6px",
-            marginBottom: "10px"
-        }}>
+        <div className="message message_success">
             {message}
         </div>
     );

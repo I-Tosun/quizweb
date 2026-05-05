@@ -1,169 +1,253 @@
-# # Quizweb – Interactive Quiz Application
 
-Interactieve quiz website gebouwd met React & Vite | Interactive quiz website built with React & Vite
+## Quizweb – Interactive Quiz App
 
-## Inhoudsopgave
+Interactieve quiz website gebouwd met React & Vite  
+Interactive quiz website built with React & Vite
+
+---
+
+# Inhoudsopgave
 
 1. [Inleiding](#inleiding)
 2. [Screenshots](#screenshots)
 3. [Functionaliteiten](#functionaliteiten)
-4. [Technieken en frameworks](#technieken-en-frameworks)
+4. [Technologieen en frameworks](#technologieen-en-frameworks)
 5. [Voorwaarden vooraf](#voorwaarden-vooraf)
 6. [Installatie](#installatie)
 7. [Inloggegevens](#inloggegevens)
 8. [Beschikbare scripts](#beschikbare-scripts)
 9. [Projectstructuur](#projectstructuur)
-10. [Bekende problemen](#bekende-problemen)
+10. [Belangrijke informatie](#belangrijke-informatie)
+11. [Licentie](#licentie)
 
 ---
 
-## Inleiding
+# Inleiding
 
-Quizweb is een interactieve quizwebsite waar gebruikers hun kennis kunnen testen op verschillende categorieën zoals Algemeen, Sport, Film, Muziek, Geografie, Kunst en Geschiedenis. De applicatie is gebouwd als eindopdracht voor de Frontend opleiding bij NOVI Hogeschool.
+Quizweb is een interactieve quizwebsite waar gebruikers hun kennis kunnen testen in verschillende categorieën zoals Algemeen, Sport, Film, Muziek, Geografie, Kunst en Geschiedenis.
 
-**Belangrijkste functionaliteiten:**
-- Quiz spelen in verschillende categorieën met een timer per vraag
-- Scorelijst met top 3 ranking
+De applicatie is ontwikkeld als eindopdracht voor de Frontend opleiding bij NOVI Hogeschool.
+
+## Belangrijkste functionaliteiten
+
+- Quiz spelen in verschillende categorieën
+- Timer per vraag
+- Scorelijst met ranking
 - Registreren en inloggen
-- Meertalig (Nederlands / Engels)
-- Admin dashboard voor beheer van gebruikers, scores en berichten
-- Contactformulier
-- Responsive design (mobile, tablet, desktop)
-
----
-
-## Screenshots
-### 1. Home
-![Home pagina](./screenshots/home.png)
-### 2. Quiz
-![Quiz pagina](./screenshots/quiz.png)
-### 3. Quiz finish
-![Quiz finish pagina](./screenshots/quiz-finish.png)
-### 4. Scorelist 
-![Quiz scorelist pagina](./screenshots/scorelist.png)
-
----
-
-## Functionaliteiten
-
-- Mogelijkheid om quizzen te spelen in verschillende categorieën
-- Timer per vraag voor extra uitdaging
-- Scorelijst met een top 3 ranking
-- Registratie- en loginfunctionaliteit
-- Meertalige ondersteuning (Nederlands en Engels)
-- Admin dashboard voor beheer van gebruikers, scores en berichten
-- Contactformulier voor gebruikersfeedback
+- Admin dashboard
+- Meertalige ondersteuning (Nederlands / Engels)
 - Responsive design voor mobiel, tablet en desktop
+- Contactformulier voor gebruikersfeedback
+
 ---
 
-## Technologieën en frameworks
+# Screenshots
 
-| Technologie | Versie | Doel |
-  |---|---|---|
-  | React | 18 | UI framework |
-  | Vite | latest | Build tool en development server |
-  | React Router | latest | Navigatie en routing |
-  | Iconify | latest | Iconen |
-  | Open Trivia API | - | Quizvragen ophalen |
-  | NOVI Dynamic API | - | Gebruikersbeheer, scores en berichten |
-  | CSS Flexbox | - | Layout en responsive design |
+## Home
+
+![Home pagina](./screenshots/homePage.png)
+
+## Quiz
+
+![Quiz pagina](./screenshots/quiz.png)
+
+## Quiz Finish
+
+![Quiz finish pagina](./screenshots/quizFinish.png)
+
+## Scorelijst
+
+![Quiz scorelijst](./screenshots/scorelistPage.png)
+
 ---
-## Voorwaarden vooraf
 
-Zorg dat de volgende software geïnstalleerd is voordat je begint:
+# Functionaliteiten
 
+- Quizzen spelen in meerdere categorieën
+- Timer systeem per vraag
+- Willekeurige antwoordvolgorde
+- Score opslaan
+- Scorelijst met topresultaten
+- Registreren en inloggen
+- Admin dashboard voor beheer van:
+  - gebruikers
+  - scores
+  - contactberichten
+- Contactformulier
+- Taalwisseling tussen Nederlands en Engels
+- Responsive design voor:
+  - mobiel
+  - tablet
+  - desktop
 
-- [Node.js](https://nodejs.org/) versie 18 of hoger 
-- [Git](https://git-scm.com/) — download via git-scm.com
-- Een code editor zoals [WebStorm](https://www.jetbrains.com/webstorm/) of [VS Code](https://code.visualstudio.com/)
+---
+
+# Technologieen en frameworks
+
+| Technologie | Doel |
+|---|---|
+| React | Frontend UI library |
+| Vite | Build tool en development server |
+| React Router DOM | Routing en navigatie |
+| Context API | State management |
+| Iconify | Iconen |
+| CSS Flexbox | Responsive layouts |
+| Open Trivia API | Quizvragen ophalen |
+| NOVI Dynamic API | Opslaan van gebruikers, scores en berichten |
+
+---
+
+# Voorwaarden vooraf
+
+Zorg dat de volgende software geïnstalleerd is:
+
+- Node.js (versie 18 of hoger)
+- npm
+- Git
 
 Controleer installatie:
+
 ```bash
 node -v
 npm -v
 ```
+
 ---
-## Installatie
 
-Volg deze stappen om het project lokaal op te zetten:
+# Installatie
 
-**Stap 1 — Clone de repository:**
+Volg onderstaande stappen om het project lokaal op te zetten en uit te voeren.
+
+## Methode 1 — Via Git clone
+
+### 1. Clone de repository
+
+Open een terminal en voer uit:
+
 ```bash
 git clone https://github.com/I-Tosun/quizweb.git
+```
+
+### 2. Open de projectmap
+
+```bash
 cd quizweb
 ```
 
-**Stap 2 — Installeer de dependencies:**
+## Methode 2 - Via ZIP bestand
+
+### 1. Download het project als zip
+
+### 2. Pak het ZIP-bestand uit
+
+### 3. Open een terminal in de projectmap
+
+```bash
+cd quizweb
+```
+
+## 3. Installeer dependencies
+
 ```bash
 npm install
 ```
 
-**Stap 3 — Configureer de omgevingsvariabelen:**
+## 4. Enviroment variables instellen
 
-Hernoem het bestand `.env.example` naar `.env`:
-```bash
-mv .env.example .env
+In de root van het project staat een bestand genaamd:
+
+```text
+.env.example
+```
+Maak hiervan een nieuwe bestand:
+```text
+.env
 ```
 
-Het `.env` bestand bevat de volgende variabelen die al zijn ingevuld:
-- `VITE_PROJECT_ID` — het project-ID voor de NOVI Dynamic API
-- `VITE_TRIVIA_TOKEN` — de API-token voor de Open Trivia API
 
-**Stap 4 — Start de applicatie:**
+
+## 5. Start de Applicatie
+
 ```bash
 npm run dev
 ```
+Na het opstarten verschijnt een lokale URL in de terminal
 
 
-**Stap 5 — Open de applicatie in je browser: http://localhost:5173**
-De applicatie is direct klaar voor gebruik — er hoeven geen API-keys aangevraagd te worden.
----
+## 6. Start de applicatie
 
-## Inloggegevens
+Open in de browser:
 
-De volgende accounts zijn beschikbaar:
-
-| Email | Wachtwoord | Rol |
-|-------|-----------|-----|
-| admin@quizweb.nl | admin123 | Admin |
-| user@quizweb.nl | user123 | User |
-
-Het admin account geeft toegang tot het admin dashboard via het Menu.
-
----
-
-## Beschikbare scripts
-
-| Script | Commando | Beschrijving |
-|---|---|---|
-| Development server | `npm run dev` | Start de lokale development server op poort 5173 |
-| Productie build | `npm run build` | Bouwt de applicatie voor productie in de `dist` map |
-| Tests uitvoeren | `npm run test` | Voert alle unit tests uit |
-| Preview build | `npm run preview` | Start een lokale preview van de productie build |
-
----
-## Projectstructuur
+```text
+http://localhost:5173
 ```
+
+---
+
+# Inloggegevens
+
+## Admin account
+
+| Email             | Wachtwoord |
+| ----------------- | ---------- |
+| admin@quizweb.nl  | admin123   |
+
+Via het admin account is het admin dashboard beschikbaar.
+
+## User account
+
+Gebruikers kunnen zelf registreren via de registratiepagina en daarna direct inloggen.
+
+---
+
+# Beschikbare scripts
+
+| Commando        | Beschrijving             |
+| --------------- | ------------------------ |
+| npm run dev     | Start development server |
+| npm run build   | Maakt productie build    |
+| npm run preview | Preview productie build  |
+| npm run test    | Voert tests uit          |
+
+---
+
+# Projectstructuur
+
+```text
 src/
-├── assets/          # Afbeeldingen en CSS bestanden
-├── components/      # Herbruikbare componenten
-├── helpers/         # Helper functies en vertalingen
-├── hooks/           # Custom React hooks
-├── layout/          # Layout componenten
-├── pages/           # Pagina componenten
-│   └── admin/       # Admin pagina's
-├── services/        # API service functies
-└── tests/           # Test bestanden
+├── assets/
+├── styles/
+│   ├── buttons/
+│   └── ui/
+├── components/
+│   ├── buttons/
+│   └── ui/
+├── context/
+├── helpers/
+├── layout/
+├── pages/
+│   └── admin/
+├── services/
+├── tests/
+└── App.jsx
 ```
----
-
-## Bekende problemen
-
-- De NOVI Dynamic API database wordt dagelijks geleegd. Registreer opnieuw als je niet kunt inloggen.
-- De taalwisseling herlaadt de pagina — quiz voortgang gaat verloren bij taalwisseling.
-- Zorg dat je de applicatie draait op poort 5173 of 3000 om CORS-fouten te vermijden.
 
 ---
-## Licentie
 
-Dit project is gemaakt als eindopdracht voor NOVI Hogeschool en is niet bedoeld voor commercieel gebruik.
+# Belangrijke informatie
+
+* De NOVI Dynamic API database kan periodiek worden geleegd.
+* Bij een lege database moeten gebruikers zich opnieuw registreren.
+* Tijdens development kan de API tijdelijk offline zijn.
+* De applicatie is getest op:
+
+  * desktop
+  * tablet
+  * iPhone SE
+  * iPhone Pro Max
+
+---
+
+# Licentie
+
+Dit project is ontwikkeld als eindopdracht voor NOVI Hogeschool en is uitsluitend bedoeld voor educatieve doeleinden.

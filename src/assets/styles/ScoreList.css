@@ -26,7 +26,7 @@
 }
 
 .score_header p {
-    font-size: 16px;
+    font-size: 20px;
     opacity: 0.9;
 }
 
@@ -39,6 +39,36 @@
     border-radius: 10px;
     font-family: "Microsoft Sans Serif", sans-serif;
     color: #000;
+}
+
+/* Stats cards */
+.score_stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.score_stat_card {
+    background-color: #ECECDC;
+    padding: 28px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.2s ease;
+    }
+
+.score_stat_card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.score_stat_card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #172FC6;
+
+    margin-bottom: 8px;
 }
 
 /* Table */
@@ -192,6 +222,9 @@
         padding: 15px;
         overflow-x: auto;
     }
+    .score_stats {
+    grid-template-columns: 1fr;
+    }
 
     .score_table {
         min-width: 500px;
@@ -208,18 +241,6 @@
     .score_row span {
         word-break: break-word;
     }
-
-    .score_row span::before {
-        font-weight: bold;
-        margin-right: 6px;
-    }
-
-    .score_row span:nth-child(1)::before { content: "Pos: "; }
-    .score_row span:nth-child(2)::before { content: "Naam: "; }
-    .score_row span:nth-child(3)::before { content: "Categorie: "; }
-    .score_row span:nth-child(4)::before { content: "Punten: "; }
-    .score_row span:nth-child(5)::before { content: "%: "; }
-    .score_row span:nth-child(6)::before { content: "Datum: "; }
 
     .score_back {
         justify-content: center;

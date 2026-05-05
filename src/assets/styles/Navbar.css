@@ -99,8 +99,7 @@
 /* Search  */
 .search {
     width: 100%;
-    padding: 8px 12px;
-    padding-right: 35px;
+    padding: 8px 35px 8px 12px;
     border: 1px solid #000;
     border-radius: 10px;
     background-color: #fff;
@@ -118,7 +117,7 @@
     border: 0;
 }
 
-/* Search icon knop mobile */
+/* Search icon */
 .search_icon_btn {
     position: absolute;
     right: 10px;
@@ -128,7 +127,8 @@
     color: #000;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+}
 
 /* Right */
 .navbar_right {
@@ -198,10 +198,8 @@
     color: #000;
 }
 
-/* Mobile */
+/* Tablet + mobile */
 @media (max-width: 768px) {
-
-    /* One row */
     .navbar {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -210,61 +208,72 @@
     }
 
     .navbar_left {
-        gap: 6px;
+        gap: 0;
     }
-
-    .navbar_logo {
-        height: 28px;
-    }
-
-    .menu_text {
-        font-size: 13px;
-    }
-
-    @media (max-width: 768px) {
-
-        .search_wrapper {
-            width: 125px;
-        }
-
-    }
-
-    /* Searchbar */
-    .search {
-        display: block;
-        width: 90px;
-        padding: 4px 24px 4px 6px;
-        font-size: 11px;
-        border-radius: 6px;
-        margin: 0;
-        flex: unset;
-    }
-
-    .search_icon_btn {
-        right: 20px;
-    }
-
     .navbar_right {
         gap: 4px;
         justify-content: end;
         flex: 2;
     }
-
+    .navbar_logo {
+        height: 28px;
+    }
+    .menu_text {
+        font-size: 13px;
+    }
+    .search_wrapper {
+        width: 125px;
+    }
+    .search { display: block;
+        width: 90px;
+        padding: 4px 24px 4px 6px;
+        font-size: 11px;
+        border-radius: 6px;
+        margin: 0; flex: unset;
+    }
+    .search_icon_btn { display: none;
+    }
     .nav-text {
         font-size: 12px;
         padding: 0 2px;
     }
-
     .language_switch {
         font-size: 12px;
     }
-
-    /* Hide Hello mobile */
     .username {
         display: none;
     }
-
     .dropdown {
         top: calc(100% + 4px);
+    }
+}
+/* Small mobile */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 8px;
+    }
+    .navbar_left {
+        gap: 0;
+    }
+    .navbar_right {
+        gap: 0;
+    } .search_wrapper {
+              width: 80px;
+          }
+    .search {
+        width: 80px;
+    }
+    .menu_text {
+        font-size: 12px;
+    } .user_section {
+              gap: 2px;
+          }
+    .navbar_right a,
+    .navbar_right button,
+    .language_switch {
+        font-size: 12px;
+    }
+    .username {
+        display: none;
     }
 }
